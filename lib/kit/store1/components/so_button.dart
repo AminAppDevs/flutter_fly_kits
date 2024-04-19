@@ -23,7 +23,7 @@ class SOButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         child: isLoading
-            ? SOLoading()
+            ? const SOLoading()
             : Text(text,
                 style: const TextStyle(
                   color: Colors.white,
