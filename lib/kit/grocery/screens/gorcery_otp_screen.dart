@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_button.dart';
 import 'package:flutter_fly_kits/kit/grocery/controllers/grocery_auth_controller.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/grocery_home_screen.dart';
-import 'package:flutter_fly_kits/kit/grocery/screens/grocery_login_screem.dart';
 import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,8 +10,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 class GroceryOtpScreen extends StatelessWidget {
   GroceryOtpScreen({super.key});
-  final GroceryAuthController groceryAuthController =
-      Get.put(GroceryAuthController());
+  final GroceryAuthController groceryAuthController = Get.put(GroceryAuthController());
   final formKey = GlobalKey<FormState>();
   final TextEditingController otpController = TextEditingController();
 
@@ -29,8 +27,7 @@ class GroceryOtpScreen extends StatelessWidget {
                 children: [
                   horizontal(double.infinity),
                   vertical(20),
-                  SvgPicture.asset("assets/images/store_one/basket.svg",
-                      height: 60),
+                  SvgPicture.asset("assets/images/store_one/basket.svg", height: 60),
                   vertical(15),
                   Text(
                     "Confirm Code",
