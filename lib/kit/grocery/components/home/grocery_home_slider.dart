@@ -4,6 +4,7 @@ import 'package:flutter_fly_kits/gen/assets.gen.dart';
 import 'package:flutter_fly_kits/kit/grocery/controllers/grocery_controller.dart';
 import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:get/get.dart';
+// ignore: depend_on_referenced_packages
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class GroceryHomeSlider extends StatelessWidget {
@@ -50,8 +51,7 @@ class GroceryHomeSlider extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: AnimatedSmoothIndicator(
-                  activeIndex:
-                      groceryController.activeSliderIndex, // PageController
+                  activeIndex: groceryController.activeSliderIndex, // PageController
                   count: sliderImages.length,
                   effect: ExpandingDotsEffect(
                     dotColor: Colors.white,

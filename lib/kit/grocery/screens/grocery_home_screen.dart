@@ -5,7 +5,6 @@ import 'package:flutter_fly_kits/kit/grocery/components/home/grocery_home_exclus
 import 'package:flutter_fly_kits/kit/grocery/components/home/grocery_home_groceries.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/home/grocery_home_search_input.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/home/grocery_home_slider.dart';
-
 import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -47,21 +46,16 @@ class GroceryHomeScreen extends StatelessWidget {
                 ],
               ),
               vertical(20),
-              // Search
-              GroceryHomeSearchInput(),
+              const GroceryHomeSearchInput(),
               vertical(10),
-              ////////// Slider //////////
               GroceryHomeSlider(),
               vertical(20),
-              ////////// Exclusive Offer //////////
-
+              GroceryHomeGroceries(),
+              vertical(20),
               GroceryHomeExclusiveOffers(),
-              ////////// Best Selling //////////
               vertical(20),
               GroceryHomeBestSelling(),
-              ////////// Groceries //////////
               vertical(20),
-              GroceryHomeGroceries(),
             ],
           ),
         ),

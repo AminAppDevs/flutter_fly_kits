@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_product_box.dart';
 import 'package:flutter_fly_kits/kit/grocery/controllers/grocery_controller.dart';
+import 'package:flutter_fly_kits/kit/grocery/models/grocery_category_model.dart';
 import 'package:flutter_fly_kits/kit/grocery/models/grocery_product_model.dart';
+import 'package:flutter_fly_kits/kit/grocery/utils/demo_data/categories.dart';
 import 'package:flutter_fly_kits/kit/grocery/utils/demo_data/products.dart';
 import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:get/get.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class GroceryHomeGroceries extends StatelessWidget {
   GroceryHomeGroceries({super.key});
@@ -24,7 +27,7 @@ class GroceryHomeGroceries extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "Best Selling",
+                "Groceries",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
@@ -49,16 +52,39 @@ class GroceryHomeGroceries extends StatelessWidget {
             ],
           ),
           // products
+
           vertical(15),
           SizedBox(
-            height: 251,
+            height: 100,
             child: ListView.builder(
-              itemCount: exclusiveOffersProductsData.length,
+              itemCount: groceryCategoriesData.length,
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
-                GroceryProductModel product = exclusiveOffersProductsData[index];
-                return GroceryProductBox(product: product);
+                GroceryCategoryModel category = groceryCategoriesData[index];
+                return Container(
+                  margin: const EdgeInsets.only(right: 10),
+                  padding: const EdgeInsets.only(top: 15, bottom: 15, left: 20, right: 40),
+                  alignment: Alignment.centerLeft,
+                  decoration: BoxDecoration(
+                    color: HexColor(category.color).withOpacity(.25),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(category.image, height: 50),
+                      horizontal(10),
+                      Text(
+                        category.name,
+                        style: TextStyle(
+                          color: GroceryColors.titleDark,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
               },
             ),
           ),

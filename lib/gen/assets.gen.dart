@@ -53,6 +53,10 @@ class $AssetsImagesGroceryGen {
   AssetGenImage get grocerySlide3 =>
       const AssetGenImage('assets/images/grocery/grocery_slide_3.png');
 
+  /// File path: assets/images/grocery/meat.png
+  AssetGenImage get meat =>
+      const AssetGenImage('assets/images/grocery/meat.png');
+
   /// File path: assets/images/grocery/onboarding_bg.png
   AssetGenImage get onboardingBg =>
       const AssetGenImage('assets/images/grocery/onboarding_bg.png');
@@ -69,6 +73,7 @@ class $AssetsImagesGroceryGen {
         grocerySlide1,
         grocerySlide2,
         grocerySlide3,
+        meat,
         onboardingBg,
         redApple
       ];

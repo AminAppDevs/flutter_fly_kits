@@ -7,7 +7,6 @@ import 'package:flutter_fly_kits/kit/grocery/screens/grocery_favorites_screen.da
 import 'package:flutter_fly_kits/kit/grocery/screens/grocery_home_screen.dart';
 import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:ionicons/ionicons.dart';
 
 class GroceryMainScreen extends StatelessWidget {
@@ -20,7 +19,7 @@ class GroceryMainScreen extends StatelessWidget {
       return Scaffold(
         body: IndexedStack(
           index: groceryController.activePage,
-          children: [
+          children: const [
             GroceryHomeScreen(),
             GroceryExploreScreen(),
             GroceryCartScreen(),

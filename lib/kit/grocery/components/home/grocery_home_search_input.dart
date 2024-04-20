@@ -14,7 +14,7 @@ class GroceryHomeSearchInput extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: InkWell(
         onTap: () {
-          Get.to(() => GrocerySearchScreen());
+          Get.to(() => const GrocerySearchScreen());
         },
         child: Container(
           height: 60,

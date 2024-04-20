@@ -13,7 +13,7 @@ class GrocerySplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 3), () {
-      Get.to(() => GroceryOnboarding());
+      Get.to(() => const GroceryOnboarding());
     });
     return Scaffold(
       backgroundColor: GroceryColors.primary,
