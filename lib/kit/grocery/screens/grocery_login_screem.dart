@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_button.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_text_form_field.dart';
 import 'package:flutter_fly_kits/kit/grocery/controllers/grocery_auth_controller.dart';
-import 'package:flutter_fly_kits/kit/grocery/screens/gorcery_otp_screen.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/grocery_home_screen.dart';
-import 'package:flutter_fly_kits/kit/grocery/screens/grocery_login_screem.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/grocery_reset_password_screen.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/grocery_signup_screen.dart';
 import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
@@ -12,15 +10,12 @@ import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-class GrocerySignupScreen extends StatelessWidget {
-  GrocerySignupScreen({super.key});
+class GroceryLoginScreen extends StatelessWidget {
+  GroceryLoginScreen({super.key});
 
   final formKey = GlobalKey<FormState>();
-  final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passworController = TextEditingController();
-  final TextEditingController confirmPassworController =
-      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +34,7 @@ class GrocerySignupScreen extends StatelessWidget {
                       height: 60),
                   vertical(15),
                   Text(
-                    "Sign Up",
+                    "Login",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -47,24 +42,13 @@ class GrocerySignupScreen extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Enter your credentials to continue",
+                    "Enter your emails and password",
                     style: TextStyle(
                       fontSize: 14,
                       color: GroceryColors.titleLight,
                     ),
                   ),
                   vertical(20),
-                  GroceryTextFormField(
-                    controller: nameController,
-                    label: "Full name",
-                    validator: (String? value) {
-                      if (value!.isEmpty) {
-                        return "Please enter your name";
-                      }
-                      return null;
-                    },
-                  ),
-                  vertical(10),
                   GroceryTextFormField(
                     controller: emailController,
                     keyboardType: TextInputType.emailAddress,
@@ -85,35 +69,43 @@ class GrocerySignupScreen extends StatelessWidget {
                     validator: (String? value) {
                       if (value!.isEmpty) {
                         return "Please enter your password";
-                      } else if (value.length < 8) {
-                        return "Password must be greater than 8 char";
                       }
                       return null;
                     },
                   ),
-                  vertical(10),
-                  GroceryTextFormField(
-                    controller: confirmPassworController,
-                    keyboardType: TextInputType.visiblePassword,
-                    label: "Confirm password",
-                    obscureText: true,
-                    validator: (String? value) {
-                      if (value!.isEmpty) {
-                        return "Please enter confirm password";
-                      } else if (value.length < 8) {
-                        return "Password must be greater than 8 char";
-                      } else if (value != passworController.text) {
-                        return "Password not match";
-                      }
-                      return null;
+                  vertical(6),
+                  InkWell(
+                    onTap: () {
+                      Get.to(() => GroceryResetPasswordScreen());
                     },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Text(
+                          "Forget Password?",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: GroceryColors.titleLight,
+                          ),
+                        ),
+                        horizontal(5),
+                        Text(
+                          "Reset",
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: GroceryColors.primary,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   vertical(10),
                   GroceryButton(
-                    text: "Sign Up",
+                    text: "Login",
                     onTap: () {
                       if (formKey.currentState!.validate()) {
-                        Get.to(() => GroceryOtpScreen());
+                        Get.to(() => GroceryHomeScreen());
                       }
                     },
                     isLoading: false,
@@ -121,13 +113,13 @@ class GrocerySignupScreen extends StatelessWidget {
                   vertical(20),
                   InkWell(
                     onTap: () {
-                      Get.to(() => GroceryLoginScreen());
+                      Get.to(() => GrocerySignupScreen());
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Already have an account?",
+                          "Don't have an account?",
                           style: TextStyle(
                             fontSize: 12,
                             color: GroceryColors.titleDark,
@@ -135,7 +127,7 @@ class GrocerySignupScreen extends StatelessWidget {
                         ),
                         horizontal(5),
                         Text(
-                          "Login",
+                          "Signup",
                           style: TextStyle(
                             fontSize: 13,
                             color: GroceryColors.primary,

@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fly_kits/kit/store1/components/so_button.dart';
-import 'package:flutter_fly_kits/kit/store1/screens/so_login_screem.dart';
-import 'package:flutter_fly_kits/kit/store1/utils/so_colors.dart';
+import 'package:flutter_fly_kits/kit/grocery/components/grocery_button.dart';
+import 'package:flutter_fly_kits/kit/grocery/screens/grocery_login_screem.dart';
+
+import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:get/get.dart';
 
-class SOOnboarding extends StatelessWidget {
-  const SOOnboarding({super.key});
+class GroceryOnboarding extends StatelessWidget {
+  const GroceryOnboarding({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: SOColors.titleLight,
+      backgroundColor: GroceryColors.titleLight,
       body: Container(
         padding: const EdgeInsets.all(16),
         decoration: const BoxDecoration(
-          image: DecorationImage(image: AssetImage("assets/images/store_one/onboarding_bg.png"), fit: BoxFit.cover),
+          image: DecorationImage(
+              image: AssetImage("assets/images/store_one/onboarding_bg.png"),
+              fit: BoxFit.cover),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -51,10 +54,10 @@ class SOOnboarding extends StatelessWidget {
               ),
             ),
             vertical(40),
-            SOButton(
+            GroceryButton(
                 text: "Get Started",
                 onTap: () {
-                  Get.to(() => SOLoginScreen());
+                  Get.to(() => GroceryLoginScreen());
                 },
                 isLoading: false),
             vertical(40),
