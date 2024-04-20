@@ -7,8 +7,8 @@ import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:get/get.dart';
 
-class GroceryHomeExclusiveOffers extends StatelessWidget {
-  GroceryHomeExclusiveOffers({super.key});
+class GroceryHomeBestSelling extends StatelessWidget {
+  GroceryHomeBestSelling({super.key});
   final GroceryController groceryController = Get.find();
 
   @override
@@ -24,7 +24,7 @@ class GroceryHomeExclusiveOffers extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "Exclusive Offers",
+                "Best Selling",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,

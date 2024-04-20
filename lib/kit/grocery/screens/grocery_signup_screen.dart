@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_button.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_text_form_field.dart';
-import 'package:flutter_fly_kits/kit/grocery/controllers/grocery_auth_controller.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/gorcery_otp_screen.dart';
-import 'package:flutter_fly_kits/kit/grocery/screens/grocery_home_screen.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/grocery_login_screem.dart';
-import 'package:flutter_fly_kits/kit/grocery/screens/grocery_reset_password_screen.dart';
-import 'package:flutter_fly_kits/kit/grocery/screens/grocery_signup_screen.dart';
 import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -19,8 +15,7 @@ class GrocerySignupScreen extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passworController = TextEditingController();
-  final TextEditingController confirmPassworController =
-      TextEditingController();
+  final TextEditingController confirmPassworController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +30,7 @@ class GrocerySignupScreen extends StatelessWidget {
                 children: [
                   horizontal(double.infinity),
                   vertical(20),
-                  SvgPicture.asset("assets/images/store_one/basket.svg",
-                      height: 60),
+                  SvgPicture.asset("assets/images/store_one/basket.svg", height: 60),
                   vertical(15),
                   Text(
                     "Sign Up",
