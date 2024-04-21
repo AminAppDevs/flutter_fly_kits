@@ -19,6 +19,8 @@ class GroceryHomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: GroceryColors.primary,
+        leading: Container(),
+        leadingWidth: 1,
         title: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

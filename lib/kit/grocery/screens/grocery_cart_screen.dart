@@ -16,6 +16,8 @@ class GroceryCartScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: Container(),
+        leadingWidth: 1,
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
