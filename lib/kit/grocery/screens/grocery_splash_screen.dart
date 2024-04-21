@@ -1,28 +1,39 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_fly_kits/gen/assets.gen.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/grocery_onboarding.dart';
 import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-class GrocerySplashScreen extends StatelessWidget {
+class GrocerySplashScreen extends StatefulWidget {
   const GrocerySplashScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 3), () {
+  State<GrocerySplashScreen> createState() => _GrocerySplashScreenState();
+}
+
+class _GrocerySplashScreenState extends State<GrocerySplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 2), () {
       Get.to(() => const GroceryOnboarding());
     });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: GroceryColors.primary,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset('assets/images/logo.svg', width: 100),
-            vertical(10),
+            SvgPicture.asset(Assets.images.flykitLight, height: 90),
+            vertical(20),
             Container(
               height: 40,
               width: 120,
@@ -32,9 +43,8 @@ class GrocerySplashScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(50),
               ),
               child: Text(
-                "Store One",
-                style: TextStyle(
-                    fontSize: 13, color: Colors.white.withOpacity(.8)),
+                "Grocery",
+                style: TextStyle(fontSize: 13, color: Colors.white.withOpacity(.8)),
               ),
             ),
           ],

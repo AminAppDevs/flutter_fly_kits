@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fly_kits/gen/assets.gen.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_button.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_text_form_field.dart';
-import 'package:flutter_fly_kits/kit/grocery/screens/grocery_home_screen.dart';
+import 'package:flutter_fly_kits/kit/grocery/screens/grocery_main_screen.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/grocery_reset_password_screen.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/grocery_signup_screen.dart';
 import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
@@ -29,7 +30,7 @@ class GroceryLoginScreen extends StatelessWidget {
                 children: [
                   horizontal(double.infinity),
                   vertical(20),
-                  SvgPicture.asset("assets/images/store_one/basket.svg", height: 60),
+                  SvgPicture.asset(Assets.images.grocery.basket, height: 50),
                   vertical(15),
                   Text(
                     "Login",
@@ -103,7 +104,7 @@ class GroceryLoginScreen extends StatelessWidget {
                     text: "Login",
                     onTap: () {
                       if (formKey.currentState!.validate()) {
-                        Get.to(() => const GroceryHomeScreen());
+                        Get.to(() => GroceryMainScreen());
                       }
                     },
                     isLoading: false,

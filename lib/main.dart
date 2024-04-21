@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fly_kits/kit/grocery/screens/grocery_main_screen.dart';
+import 'package:flutter_fly_kits/kit/home_screen.dart';
 
 import 'package:get/get.dart';
 
@@ -17,7 +17,7 @@ class App extends StatelessWidget {
       title: "Fly Kit",
       theme: ThemeData(fontFamily: "Roboto"),
       debugShowCheckedModeBanner: false,
-      home: GroceryMainScreen(),
+      home: const HomeScreen(),
     );
   }
 }

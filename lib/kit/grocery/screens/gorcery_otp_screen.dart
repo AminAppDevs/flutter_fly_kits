@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fly_kits/gen/assets.gen.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_button.dart';
 import 'package:flutter_fly_kits/kit/grocery/controllers/grocery_auth_controller.dart';
-import 'package:flutter_fly_kits/kit/grocery/screens/grocery_home_screen.dart';
+import 'package:flutter_fly_kits/kit/grocery/screens/grocery_main_screen.dart';
 import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -27,7 +28,7 @@ class GroceryOtpScreen extends StatelessWidget {
                 children: [
                   horizontal(double.infinity),
                   vertical(20),
-                  SvgPicture.asset("assets/images/store_one/basket.svg", height: 60),
+                  SvgPicture.asset(Assets.images.grocery.basket, height: 50),
                   vertical(15),
                   Text(
                     "Confirm Code",
@@ -87,7 +88,7 @@ class GroceryOtpScreen extends StatelessWidget {
                     text: "Confirm",
                     onTap: () {
                       if (formKey.currentState!.validate()) {
-                        Get.to(() => const GroceryHomeScreen());
+                        Get.to(() => GroceryMainScreen());
                       }
                     },
                     isLoading: false,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fly_kits/gen/assets.gen.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_button.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_text_form_field.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/gorcery_otp_screen.dart';
@@ -25,8 +26,7 @@ class GroceryResetPasswordScreen extends StatelessWidget {
                 children: [
                   horizontal(double.infinity),
                   vertical(20),
-                  SvgPicture.asset("assets/images/store_one/basket.svg",
-                      height: 60),
+                  SvgPicture.asset(Assets.images.grocery.basket, height: 50),
                   vertical(15),
                   Text(
                     "Reset password",

@@ -15,6 +15,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/assets.gen.dart
   String get assetsGen => 'assets/images/assets.gen.dart';
 
+  $AssetsImagesBlogGen get blog => const $AssetsImagesBlogGen();
+
+  /// File path: assets/images/flykit.svg
+  String get flykit => 'assets/images/flykit.svg';
+
+  /// File path: assets/images/flykit_light.svg
+  String get flykitLight => 'assets/images/flykit_light.svg';
+
   $AssetsImagesGroceryGen get grocery => const $AssetsImagesGroceryGen();
 
   /// File path: assets/images/logo.svg
@@ -23,8 +31,21 @@ class $AssetsImagesGen {
   /// File path: assets/images/logo_dark.svg
   String get logoDark => 'assets/images/logo_dark.svg';
 
+  $AssetsImagesNewsGen get news => const $AssetsImagesNewsGen();
+  $AssetsImagesTravelGen get travel => const $AssetsImagesTravelGen();
+
   /// List of all assets
-  List<String> get values => [assetsGen, logo, logoDark];
+  List<String> get values => [assetsGen, flykit, flykitLight, logo, logoDark];
+}
+
+class $AssetsImagesBlogGen {
+  const $AssetsImagesBlogGen();
+
+  /// File path: assets/images/blog/logo.svg
+  String get logo => 'assets/images/blog/logo.svg';
+
+  /// List of all assets
+  List<String> get values => [logo];
 }
 
 class $AssetsImagesGroceryGen {
@@ -125,6 +146,26 @@ class $AssetsImagesGroceryGen {
         shata,
         vegatables
       ];
+}
+
+class $AssetsImagesNewsGen {
+  const $AssetsImagesNewsGen();
+
+  /// File path: assets/images/news/logo.svg
+  String get logo => 'assets/images/news/logo.svg';
+
+  /// List of all assets
+  List<String> get values => [logo];
+}
+
+class $AssetsImagesTravelGen {
+  const $AssetsImagesTravelGen();
+
+  /// File path: assets/images/travel/logo.svg
+  String get logo => 'assets/images/travel/logo.svg';
+
+  /// List of all assets
+  List<String> get values => [logo];
 }
 
 class Assets {

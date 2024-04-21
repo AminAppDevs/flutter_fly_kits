@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fly_kits/gen/assets.gen.dart';
 import 'package:flutter_fly_kits/kit/grocery/components/grocery_button.dart';
 import 'package:flutter_fly_kits/kit/grocery/screens/grocery_login_screem.dart';
 
@@ -15,10 +16,8 @@ class GroceryOnboarding extends StatelessWidget {
       backgroundColor: GroceryColors.titleLight,
       body: Container(
         padding: const EdgeInsets.all(16),
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/images/store_one/onboarding_bg.png"),
-              fit: BoxFit.cover),
+        decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage(Assets.images.grocery.onboardingBg.path), fit: BoxFit.cover),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -36,7 +35,7 @@ class GroceryOnboarding extends StatelessWidget {
             ),
             vertical(10),
             const Text(
-              "Fly kit Store",
+              "Fly kit Grocery",
               style: TextStyle(
                 fontSize: 35,
                 color: Colors.white,
