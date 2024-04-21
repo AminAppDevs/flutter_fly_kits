@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/kit/blog/controllers/blog_controller.dart';
+import 'package:flutter_fly_kits/kit/blog/screens/blog_discover_screen.dart';
 import 'package:flutter_fly_kits/kit/blog/screens/blog_home_screen.dart';
+import 'package:flutter_fly_kits/kit/blog/screens/blog_my_articles_screen.dart';
+import 'package:flutter_fly_kits/kit/blog/screens/blog_profile_screen.dart';
 import 'package:flutter_fly_kits/kit/blog/utils/blog_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:get/get.dart';
@@ -17,8 +20,11 @@ class BlogMainScreen extends StatelessWidget {
         return Scaffold(
           body: IndexedStack(
             index: blogController.activePage,
-            children: const [
-              BlogHomeScreen(),
+            children: [
+              const BlogHomeScreen(),
+              BlogDiscoverScreen(),
+              BlogMyArticlesScreen(),
+              BlogProfileScreen(),
             ],
           ),
           bottomNavigationBar: Container(

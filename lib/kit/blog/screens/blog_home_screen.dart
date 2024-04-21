@@ -15,6 +15,7 @@ class BlogHomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leadingWidth: 0,
         backgroundColor: Colors.white,
         centerTitle: false,
         title: Row(
@@ -55,11 +56,11 @@ class BlogHomeScreen extends StatelessWidget {
           children: [
             BlogHomeSlider(),
             vertical(15),
-            BolgHomeTopWriter(),
+            const BolgHomeTopWriter(),
             vertical(15),
-            BolgHomeRecentArticles(),
+            const BolgHomeRecentArticles(),
             vertical(15),
-            BolgHomeYourBookmarks(),
+            const BolgHomeYourBookmarks(),
             vertical(30),
           ],
         ),
