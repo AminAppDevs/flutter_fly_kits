@@ -47,7 +47,7 @@ class BolgExploreByTopic extends StatelessWidget {
                 return Container(
                   width: 170,
                   margin: const EdgeInsets.only(right: 15),
-                  child: BlogTopicBox(),
+                  child: const BlogTopicBox(),
                 );
               }),
         ),

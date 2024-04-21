@@ -23,8 +23,8 @@ class BlogMainScreen extends StatelessWidget {
             children: [
               const BlogHomeScreen(),
               BlogDiscoverScreen(),
-              BlogMyArticlesScreen(),
-              BlogProfileScreen(),
+              const BlogMyArticlesScreen(),
+              const BlogProfileScreen(),
             ],
           ),
           bottomNavigationBar: Container(
