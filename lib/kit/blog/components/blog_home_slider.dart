@@ -1,8 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/gen/assets.gen.dart';
+import 'package:flutter_fly_kits/kit/blog/utils/blog_colors.dart';
 import 'package:flutter_fly_kits/kit/grocery/controllers/grocery_controller.dart';
-import 'package:flutter_fly_kits/kit/grocery/utils/grocery_colors.dart';
 import 'package:get/get.dart';
 // ignore: depend_on_referenced_packages
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -55,9 +55,9 @@ class BlogHomeSlider extends StatelessWidget {
                   count: sliderImages.length,
                   effect: ExpandingDotsEffect(
                     dotColor: Colors.white,
-                    activeDotColor: GroceryColors.primary,
-                    dotHeight: 10,
-                    dotWidth: 10,
+                    activeDotColor: BlogColors.primary,
+                    dotHeight: 7,
+                    dotWidth: 7,
                   ), // your preferred effect
                 ),
               ),
@@ -71,15 +71,11 @@ class BlogHomeSlider extends StatelessWidget {
 
 List<Image> sliderImages = [
   Image.asset(
-    Assets.images.grocery.grocerySlide1.path,
+    Assets.images.blog.slide1.path,
     fit: BoxFit.cover,
   ),
   Image.asset(
-    Assets.images.grocery.grocerySlide2.path,
-    fit: BoxFit.cover,
-  ),
-  Image.asset(
-    Assets.images.grocery.grocerySlide3.path,
+    Assets.images.blog.slide1.path,
     fit: BoxFit.cover,
   ),
 ];

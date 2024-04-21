@@ -41,11 +41,118 @@ class $AssetsImagesGen {
 class $AssetsImagesBlogGen {
   const $AssetsImagesBlogGen();
 
+  /// File path: assets/images/blog/avatar1.svg
+  String get avatar1 => 'assets/images/blog/avatar1.svg';
+
+  /// File path: assets/images/blog/avatar2.svg
+  String get avatar2 => 'assets/images/blog/avatar2.svg';
+
+  /// File path: assets/images/blog/avatar3.svg
+  String get avatar3 => 'assets/images/blog/avatar3.svg';
+
+  /// File path: assets/images/blog/avatar4.svg
+  String get avatar4 => 'assets/images/blog/avatar4.svg';
+
+  /// File path: assets/images/blog/avatar5.svg
+  String get avatar5 => 'assets/images/blog/avatar5.svg';
+
   /// File path: assets/images/blog/logo.svg
   String get logo => 'assets/images/blog/logo.svg';
 
+  /// File path: assets/images/blog/post1.png
+  AssetGenImage get post1 =>
+      const AssetGenImage('assets/images/blog/post1.png');
+
+  /// File path: assets/images/blog/post10.png
+  AssetGenImage get post10 =>
+      const AssetGenImage('assets/images/blog/post10.png');
+
+  /// File path: assets/images/blog/post11.png
+  AssetGenImage get post11 =>
+      const AssetGenImage('assets/images/blog/post11.png');
+
+  /// File path: assets/images/blog/post12.png
+  AssetGenImage get post12 =>
+      const AssetGenImage('assets/images/blog/post12.png');
+
+  /// File path: assets/images/blog/post13.png
+  AssetGenImage get post13 =>
+      const AssetGenImage('assets/images/blog/post13.png');
+
+  /// File path: assets/images/blog/post14.png
+  AssetGenImage get post14 =>
+      const AssetGenImage('assets/images/blog/post14.png');
+
+  /// File path: assets/images/blog/post15.png
+  AssetGenImage get post15 =>
+      const AssetGenImage('assets/images/blog/post15.png');
+
+  /// File path: assets/images/blog/post2.png
+  AssetGenImage get post2 =>
+      const AssetGenImage('assets/images/blog/post2.png');
+
+  /// File path: assets/images/blog/post3.png
+  AssetGenImage get post3 =>
+      const AssetGenImage('assets/images/blog/post3.png');
+
+  /// File path: assets/images/blog/post4.png
+  AssetGenImage get post4 =>
+      const AssetGenImage('assets/images/blog/post4.png');
+
+  /// File path: assets/images/blog/post5.png
+  AssetGenImage get post5 =>
+      const AssetGenImage('assets/images/blog/post5.png');
+
+  /// File path: assets/images/blog/post6.png
+  AssetGenImage get post6 =>
+      const AssetGenImage('assets/images/blog/post6.png');
+
+  /// File path: assets/images/blog/post7.png
+  AssetGenImage get post7 =>
+      const AssetGenImage('assets/images/blog/post7.png');
+
+  /// File path: assets/images/blog/post8.png
+  AssetGenImage get post8 =>
+      const AssetGenImage('assets/images/blog/post8.png');
+
+  /// File path: assets/images/blog/post9.png
+  AssetGenImage get post9 =>
+      const AssetGenImage('assets/images/blog/post9.png');
+
+  /// File path: assets/images/blog/slide1.png
+  AssetGenImage get slide1 =>
+      const AssetGenImage('assets/images/blog/slide1.png');
+
+  /// File path: assets/images/blog/slide2.png
+  AssetGenImage get slide2 =>
+      const AssetGenImage('assets/images/blog/slide2.png');
+
   /// List of all assets
-  List<String> get values => [logo];
+  List<dynamic> get values => [
+        avatar1,
+        avatar2,
+        avatar3,
+        avatar4,
+        avatar5,
+        logo,
+        post1,
+        post10,
+        post11,
+        post12,
+        post13,
+        post14,
+        post15,
+        post2,
+        post3,
+        post4,
+        post5,
+        post6,
+        post7,
+        post8,
+        post9,
+        slide1,
+        slide2
+      ];
 }
 
 class $AssetsImagesGroceryGen {

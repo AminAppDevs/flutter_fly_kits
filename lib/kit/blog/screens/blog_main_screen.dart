@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/kit/blog/controllers/blog_controller.dart';
-import 'package:flutter_fly_kits/kit/blog/screens/home/blog_home_scree.dart';
+import 'package:flutter_fly_kits/kit/blog/screens/blog_home_screen.dart';
 import 'package:flutter_fly_kits/kit/blog/utils/blog_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:get/get.dart';
@@ -17,17 +17,24 @@ class BlogMainScreen extends StatelessWidget {
         return Scaffold(
           body: IndexedStack(
             index: blogController.activePage,
-            children: <Widget>[
-              const BlogHomeScreen(),
+            children: const [
+              BlogHomeScreen(),
             ],
           ),
           bottomNavigationBar: Container(
             height: 60,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border(
+                  top: BorderSide(
+                color: Colors.grey.shade200,
+              )),
+            ),
             padding: const EdgeInsets.symmetric(horizontal: 20),
             alignment: Alignment.center,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 bootmSheetItem(
                   index: 0,
@@ -57,12 +64,12 @@ class BlogMainScreen extends StatelessWidget {
                   ),
                 ),
                 bootmSheetItem(
-                  index: 1,
+                  index: 2,
                   icon: Ionicons.document_text_outline,
                   title: "My Articles",
                 ),
                 bootmSheetItem(
-                  index: 1,
+                  index: 3,
                   icon: Ionicons.person_outline,
                   title: "Profile",
                 ),
@@ -84,16 +91,17 @@ class BlogMainScreen extends StatelessWidget {
         blogController.updateActivePage(index);
       },
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
             icon,
-            color: BlogColors.titleLight,
+            color: blogController.activePage == index ? BlogColors.primary : BlogColors.titleLight,
             size: 22,
           ),
           vertical(3),
           Text(
             title,
-            style: TextStyle(fontSize: 12, color: BlogColors.titleLight),
+            style: TextStyle(fontSize: 12, color: blogController.activePage == index ? BlogColors.primary : BlogColors.titleLight),
           ),
         ],
       ),
