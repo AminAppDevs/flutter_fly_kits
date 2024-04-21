@@ -40,11 +40,11 @@ class GroceryMainScreen extends StatelessWidget {
             backgroundColor: Colors.white,
             currentIndex: groceryController.activePage,
             elevation: 0,
-            iconSize: 25,
+            iconSize: 22,
             selectedFontSize: 14,
             unselectedFontSize: 14,
             selectedItemColor: GroceryColors.primary,
-            unselectedItemColor: GroceryColors.titleLight,
+            unselectedItemColor: GroceryColors.titleLighter,
             selectedLabelStyle: const TextStyle(
               fontWeight: FontWeight.w500,
             ),

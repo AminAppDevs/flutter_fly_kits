@@ -51,14 +51,18 @@ class GroceryHomeBestSelling extends StatelessWidget {
           // products
           vertical(15),
           SizedBox(
-            height: 251,
+            height: 248,
             child: ListView.builder(
               itemCount: exclusiveOffersProductsData.length,
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
                 GroceryProductModel product = exclusiveOffersProductsData[index];
-                return GroceryProductBox(product: product);
+                return Container(
+                  width: 180,
+                  margin: const EdgeInsets.only(right: 10),
+                  child: GroceryProductBox(product: product, maxLines: 1),
+                );
               },
             ),
           ),

@@ -18,34 +18,52 @@ class GroceryHomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        title: SvgPicture.asset(
-          Assets.images.grocery.basket,
-          height: 35,
+        backgroundColor: GroceryColors.primary,
+        title: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              Assets.images.grocery.basket,
+              height: 25,
+            ),
+            horizontal(10),
+            const Text(
+              "FLY KIT",
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Text(
+                  "Algazira, Sudan",
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                horizontal(4),
+                const Icon(Ionicons.location, color: Colors.white, size: 20),
+              ],
+            ),
+          ),
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Icon(Ionicons.location, color: GroceryColors.titleLight, size: 25),
-                  horizontal(4),
-                  Text(
-                    "Algazira, Sudan",
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: GroceryColors.titleLight,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
-              ),
-              vertical(20),
+              vertical(10),
               const GroceryHomeSearchInput(),
               vertical(10),
               GroceryHomeSlider(),

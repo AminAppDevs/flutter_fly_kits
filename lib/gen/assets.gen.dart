@@ -30,6 +30,14 @@ class $AssetsImagesGen {
 class $AssetsImagesGroceryGen {
   const $AssetsImagesGroceryGen();
 
+  /// File path: assets/images/grocery/avatar.jpg
+  AssetGenImage get avatar =>
+      const AssetGenImage('assets/images/grocery/avatar.jpg');
+
+  /// File path: assets/images/grocery/bakery.png
+  AssetGenImage get bakery =>
+      const AssetGenImage('assets/images/grocery/bakery.png');
+
   /// File path: assets/images/grocery/banana.png
   AssetGenImage get banana =>
       const AssetGenImage('assets/images/grocery/banana.png');
@@ -37,9 +45,21 @@ class $AssetsImagesGroceryGen {
   /// File path: assets/images/grocery/basket.svg
   String get basket => 'assets/images/grocery/basket.svg';
 
+  /// File path: assets/images/grocery/cat1.png
+  AssetGenImage get cat1 =>
+      const AssetGenImage('assets/images/grocery/cat1.png');
+
+  /// File path: assets/images/grocery/dairy.png
+  AssetGenImage get dairy =>
+      const AssetGenImage('assets/images/grocery/dairy.png');
+
   /// File path: assets/images/grocery/eggs.png
   AssetGenImage get eggs =>
       const AssetGenImage('assets/images/grocery/eggs.png');
+
+  /// File path: assets/images/grocery/ginger.png
+  AssetGenImage get ginger =>
+      const AssetGenImage('assets/images/grocery/ginger.png');
 
   /// File path: assets/images/grocery/grocery_slide_1.png
   AssetGenImage get grocerySlide1 =>
@@ -57,25 +77,53 @@ class $AssetsImagesGroceryGen {
   AssetGenImage get meat =>
       const AssetGenImage('assets/images/grocery/meat.png');
 
+  /// File path: assets/images/grocery/meat2.png
+  AssetGenImage get meat2 =>
+      const AssetGenImage('assets/images/grocery/meat2.png');
+
+  /// File path: assets/images/grocery/oil.png
+  AssetGenImage get oil => const AssetGenImage('assets/images/grocery/oil.png');
+
   /// File path: assets/images/grocery/onboarding_bg.png
   AssetGenImage get onboardingBg =>
       const AssetGenImage('assets/images/grocery/onboarding_bg.png');
+
+  /// File path: assets/images/grocery/order_success.svg
+  String get orderSuccess => 'assets/images/grocery/order_success.svg';
 
   /// File path: assets/images/grocery/red_apple.png
   AssetGenImage get redApple =>
       const AssetGenImage('assets/images/grocery/red_apple.png');
 
+  /// File path: assets/images/grocery/shata.png
+  AssetGenImage get shata =>
+      const AssetGenImage('assets/images/grocery/shata.png');
+
+  /// File path: assets/images/grocery/vegatables.png
+  AssetGenImage get vegatables =>
+      const AssetGenImage('assets/images/grocery/vegatables.png');
+
   /// List of all assets
   List<dynamic> get values => [
+        avatar,
+        bakery,
         banana,
         basket,
+        cat1,
+        dairy,
         eggs,
+        ginger,
         grocerySlide1,
         grocerySlide2,
         grocerySlide3,
         meat,
+        meat2,
+        oil,
         onboardingBg,
-        redApple
+        orderSuccess,
+        redApple,
+        shata,
+        vegatables
       ];
 }
 
