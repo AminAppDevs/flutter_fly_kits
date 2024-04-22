@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fly_kits/kit/blog/controllers/blog_create_post_controller.dart';
 import 'package:flutter_fly_kits/kit/blog/models/blog_post_model.dart';
 import 'package:flutter_fly_kits/kit/blog/utils/blog_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
@@ -8,6 +9,7 @@ import 'package:ionicons/ionicons.dart';
 
 class BlogPostDetailsScreen extends StatelessWidget {
   BlogPostDetailsScreen({super.key});
+  final BlogCreatePostController blogCreatePostController = Get.put(BlogCreatePostController());
   final post = Get.arguments as BlogPostModel;
 
   @override

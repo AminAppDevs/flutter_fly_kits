@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fly_kits/kit/blog/components/post/blog_post_image_bottom_sheet.dart';
 import 'package:flutter_fly_kits/kit/blog/utils/blog_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
+import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 
 class BlogPostUploadImage extends StatelessWidget {
@@ -10,7 +12,9 @@ class BlogPostUploadImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(20),
-      onTap: () {},
+      onTap: () {
+        Get.bottomSheet(BlogPostImageBottmsheet());
+      },
       child: Container(
         alignment: Alignment.center,
         height: 250,
