@@ -7,7 +7,7 @@ import 'package:ionicons/ionicons.dart';
 
 class BlogPostImageBottmsheet extends StatelessWidget {
   BlogPostImageBottmsheet({super.key});
-  final BlogCreatePostController blogCreatePostController = Get.find();
+  final BlogCreatePostController blogCreatePostController = Get.put(BlogCreatePostController());
 
   @override
   Widget build(BuildContext context) {
