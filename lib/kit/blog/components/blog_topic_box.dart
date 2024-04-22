@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/kit/blog/models/blog_topic_model.dart';
+import 'package:flutter_fly_kits/kit/blog/screens/blog_topic_posts_screen.dart';
+import 'package:get/get.dart';
 
 class BlogTopicBox extends StatelessWidget {
   const BlogTopicBox({super.key, required this.topic});
@@ -9,7 +11,9 @@ class BlogTopicBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(20),
-      onTap: () {},
+      onTap: () {
+        Get.to(() => const BlogTopicPostsScreen());
+      },
       child: Stack(
         children: [
           Container(

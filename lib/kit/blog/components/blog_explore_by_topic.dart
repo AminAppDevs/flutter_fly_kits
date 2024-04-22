@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/kit/blog/components/blog_topic_box.dart';
+import 'package:flutter_fly_kits/kit/blog/screens/blog_topics_screen.dart';
 import 'package:flutter_fly_kits/kit/blog/utils/blog_colors.dart';
 import 'package:flutter_fly_kits/kit/blog/utils/topics.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
+import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 
 class BolgExploreByTopic extends StatelessWidget {
@@ -27,7 +29,9 @@ class BolgExploreByTopic extends StatelessWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => const BlogTopicsScreen());
+                },
                 child: Icon(
                   Ionicons.arrow_forward_outline,
                   size: 20,
@@ -42,6 +46,7 @@ class BolgExploreByTopic extends StatelessWidget {
           height: 110,
           padding: const EdgeInsets.only(left: 20),
           child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
               itemCount: topicsData.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
