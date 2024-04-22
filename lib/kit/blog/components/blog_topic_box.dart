@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fly_kits/kit/blog/models/blog_topic_model.dart';
 
 class BlogTopicBox extends StatelessWidget {
-  const BlogTopicBox({super.key});
+  const BlogTopicBox({super.key, required this.topic});
+  final BlogTopicModel topic;
 
   @override
   Widget build(BuildContext context) {
