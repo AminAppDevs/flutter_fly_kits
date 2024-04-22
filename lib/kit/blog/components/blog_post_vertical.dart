@@ -79,7 +79,7 @@ class BlogPostVertical extends StatelessWidget {
               height: 1.3,
             ),
           ),
-          vertical(8),
+          vertical(12),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -102,7 +102,7 @@ class BlogPostVertical extends StatelessWidget {
                         maxLines: 1,
                         style: TextStyle(
                           fontSize: 12,
-                          color: BlogColors.titleLight.withOpacity(.7),
+                          color: BlogColors.primary,
                         ),
                       ),
                     ),

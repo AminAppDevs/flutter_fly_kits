@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/kit/blog/components/blog_discover_most_popular.dart';
+import 'package:flutter_fly_kits/kit/blog/components/blog_discover_new_articles.dart';
 import 'package:flutter_fly_kits/kit/blog/components/blog_explore_by_topic.dart';
 import 'package:flutter_fly_kits/kit/blog/components/blog_form_filed.dart';
 import 'package:flutter_fly_kits/kit/blog/utils/blog_colors.dart';
@@ -64,6 +65,8 @@ class BlogDiscoverScreen extends StatelessWidget {
             const BolgDiscoverMostPopular(),
             vertical(20),
             const BolgExploreByTopic(),
+            vertical(20),
+            const BolgDiscoverNewArticles(),
           ],
         ),
       ),
