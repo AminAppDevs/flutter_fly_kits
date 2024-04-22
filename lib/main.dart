@@ -16,7 +16,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: "Fly Kit",
-      theme: ThemeData(fontFamily: "Roboto"),
+      theme: ThemeData(fontFamily: "SemiboldItalic"),
       debugShowCheckedModeBanner: false,
       home: BlogMainScreen(),
     );
