@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/gen/assets.gen.dart';
+import 'package:flutter_fly_kits/kit/blog/screens/bolg_top_writer_screen.dart';
 import 'package:flutter_fly_kits/kit/blog/utils/blog_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 
 class BolgHomeTopWriter extends StatelessWidget {
@@ -27,7 +29,9 @@ class BolgHomeTopWriter extends StatelessWidget {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Get.to(() => BlogTopwriterScreen());
+                },
                 child: Icon(
                   Ionicons.arrow_forward_outline,
                   size: 20,
@@ -39,9 +43,10 @@ class BolgHomeTopWriter extends StatelessWidget {
         ),
         vertical(10),
         Container(
-          height: 90,
+          height: 100,
           padding: const EdgeInsets.only(left: 20),
           child: ListView(
+            physics: const BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
             children: [
               topWriterBox(
@@ -73,15 +78,17 @@ class BolgHomeTopWriter extends StatelessWidget {
 
   InkWell topWriterBox({required String avatar, required String name}) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Get.to(() => BlogTopwriterScreen());
+      },
       child: Padding(
         padding: const EdgeInsets.only(right: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              width: 60,
-              height: 60,
+              width: 70,
+              height: 70,
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(100),
@@ -98,7 +105,7 @@ class BolgHomeTopWriter extends StatelessWidget {
             Text(
               name,
               style: TextStyle(
-                fontSize: 13,
+                fontSize: 12,
                 color: BlogColors.titleLight,
               ),
             ),

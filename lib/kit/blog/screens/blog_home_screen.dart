@@ -46,7 +46,7 @@ class BlogHomeScreen extends StatelessWidget {
             onPressed: () {},
             icon: Icon(
               Ionicons.notifications,
-              color: BlogColors.titleLighter,
+              color: BlogColors.titleLight,
             ),
           ),
         ],

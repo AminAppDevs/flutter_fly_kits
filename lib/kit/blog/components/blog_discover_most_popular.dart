@@ -40,7 +40,7 @@ class BolgDiscoverMostPopular extends StatelessWidget {
         ),
         vertical(10),
         Container(
-          height: 230,
+          height: 240,
           padding: const EdgeInsets.only(left: 20),
           child: ListView.builder(
               itemCount: recentArticlesData.length,
@@ -48,7 +48,7 @@ class BolgDiscoverMostPopular extends StatelessWidget {
               itemBuilder: (context, index) {
                 BlogPostModel post = recentArticlesData[index];
                 return Container(
-                  height: 230,
+                  height: 240,
                   width: 150,
                   margin: const EdgeInsets.only(right: 15),
                   child: BlogPostVertical(

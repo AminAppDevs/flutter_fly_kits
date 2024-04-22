@@ -57,7 +57,7 @@ class BlogPostVertical extends StatelessWidget {
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: Icon(
-                        post.isMarked ? Ionicons.bookmark_outline : Ionicons.bookmark_outline,
+                        post.isMarked ? Ionicons.bookmark : Ionicons.bookmark_outline,
                         color: Colors.white,
                         size: 15,
                       ),

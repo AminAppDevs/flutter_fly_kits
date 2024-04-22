@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fly_kits/kit/blog/components/blog_topic_box.dart';
-import 'package:flutter_fly_kits/kit/blog/models/blog_topic_model.dart';
 import 'package:flutter_fly_kits/kit/blog/utils/blog_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
 import 'package:ionicons/ionicons.dart';
