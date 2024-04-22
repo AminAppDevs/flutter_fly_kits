@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_fly_kits/kit/blog/screens/blog_main_screen.dart';
+import 'package:flutter_fly_kits/kit/home_screen.dart';
 
 import 'package:get/get.dart';
 
@@ -18,7 +18,7 @@ class App extends StatelessWidget {
       title: "Fly Kit",
       theme: ThemeData(fontFamily: "SemiboldItalic"),
       debugShowCheckedModeBanner: false,
-      home: BlogMainScreen(),
+      home: HomeScreen(),
     );
   }
 }
