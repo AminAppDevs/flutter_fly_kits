@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fly_kits/kit/blog/controllers/blog_controller.dart';
+import 'package:flutter_fly_kits/kit/blog/screens/blog_create_article_screen.dart';
 import 'package:flutter_fly_kits/kit/blog/screens/blog_discover_screen.dart';
 import 'package:flutter_fly_kits/kit/blog/screens/blog_home_screen.dart';
 import 'package:flutter_fly_kits/kit/blog/screens/blog_my_articles_screen.dart';
@@ -54,7 +55,9 @@ class BlogMainScreen extends StatelessWidget {
                 ),
                 InkWell(
                   borderRadius: BorderRadius.circular(50),
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => BlogCreateArticleScreen());
+                  },
                   child: Container(
                     width: 40,
                     height: 40,
