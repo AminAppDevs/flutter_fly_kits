@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fly_kits/kit/blog/components/post/blog_create_post_form.dart';
 import 'package:flutter_fly_kits/kit/blog/components/post/blog_post_upload_image.dart';
 import 'package:flutter_fly_kits/kit/blog/utils/blog_colors.dart';
 import 'package:flutter_fly_kits/utils/spacing.dart';
@@ -72,15 +73,16 @@ class BlogCreateArticleScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // post image
-              BlogPostUploadImage(),
+              const BlogPostUploadImage(),
               // post form
+              BlogCreatePostForm(),
               // post topic and publication time
             ],
           ),

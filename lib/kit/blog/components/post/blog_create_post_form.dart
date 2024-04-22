@@ -1,10 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_fly_kits/kit/blog/components/blog_form_filed.dart';
+import 'package:flutter_fly_kits/utils/spacing.dart';
+import 'package:ionicons/ionicons.dart';
 
 class BlogCreatePostForm extends StatelessWidget {
-  const BlogCreatePostForm({super.key});
+  BlogCreatePostForm({super.key});
+  final formKey = GlobalKey<FormState>();
+
+  final TextEditingController titleController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      children: [
+        vertical(15),
+        BlogFormField(
+          controller: titleController,
+          icon: Ionicons.create_outline,
+          hintText: "title",
+        ),
+        vertical(15),
+      ],
+    );
   }
 }

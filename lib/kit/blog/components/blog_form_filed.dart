@@ -12,54 +12,51 @@ class BlogFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: TextFormField(
-        controller: controller,
-        validator: validator,
-        inputFormatters: inputFormatters,
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: Colors.grey.shade200,
-          hintText: hintText,
-          hintStyle: TextStyle(
-            fontSize: 14,
-            color: BlogColors.titleLight.withOpacity(.6),
-            fontWeight: FontWeight.w300,
+    return TextFormField(
+      controller: controller,
+      validator: validator,
+      inputFormatters: inputFormatters,
+      decoration: InputDecoration(
+        filled: true,
+        fillColor: Colors.grey.shade200,
+        hintText: hintText,
+        hintStyle: TextStyle(
+          fontSize: 14,
+          color: BlogColors.titleLight.withOpacity(.6),
+          fontWeight: FontWeight.w300,
+        ),
+        prefixIcon: Icon(
+          icon,
+          size: 22,
+          color: BlogColors.titleLight,
+        ),
+        contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: BorderSide(
+            color: Colors.grey.shade200,
+            width: 1,
           ),
-          prefixIcon: Icon(
-            icon,
-            size: 22,
-            color: BlogColors.titleLight,
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: BorderSide(
+            color: BlogColors.primary,
+            width: 1,
           ),
-          contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: BorderSide(
-              color: Colors.grey.shade200,
-              width: 1,
-            ),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1,
           ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: BorderSide(
-              color: BlogColors.primary,
-              width: 1,
-            ),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(
-              color: Colors.red,
-              width: 1,
-            ),
-          ),
-          focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(15),
-            borderSide: const BorderSide(
-              color: Colors.red,
-              width: 1,
-            ),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 1,
           ),
         ),
       ),
